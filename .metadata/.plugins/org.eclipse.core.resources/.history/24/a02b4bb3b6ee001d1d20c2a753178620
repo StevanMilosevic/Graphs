@@ -1,0 +1,30 @@
+package adjecencyMatrix;
+
+public class Graph {
+	// ovde cemo deklarisati matricu brojeva u kojoj ce da cuvamo 0 i 1 za pozicije
+	// gde postoje cvorovi i gde ih nema
+
+	int[][] matrica;
+
+	Graph(int velicina) { 						// velicina je broj cvorova
+		matrica = new int[velicina][velicina]; 	// kompleksnost je O(V^2)
+	}
+
+	public void dodajCvor(Cvor cvor) {
+
+	}
+
+	// dodavanje grane izmedju dva cvora
+	public void dodajGranu(int pocetniCvor, int destinacija) { 	// ubacivanjem broja 1 na zadatu poziciju
+		matrica[pocetniCvor][destinacija] = 1; 					// dodali smo granu izmedju dva cvora
+	}
+
+	public boolean proveriGranu(int pocetniCvor, int destinacija) {
+		if (matrica[pocetniCvor][destinacija] == 1)
+			return true;
+		else
+			return false;
+	}
+	
+	public void stampajMatricu() {}
+}

@@ -1,0 +1,62 @@
+package stevan;
+
+/* Grafovi su nelinearne agregacija cvorova(node, vertex) i grana(edge). Cvor moze da sadrzi neki tip podatka a grana je 
+ * konekcija izmedju dve grane. 
+ * Postoje dve vrsta grafova o kojima cemo ovde da raspravljamo Undirected i Directed.
+ * 
+ * Primer za unidirected graph bi bila socijalna mreza kao Facebook, svaki cvor predstavlja osobu
+ * na mrezi, koja moze da ima prijatelje sa kojima je povezan preko grane. Ako su dva cvora 
+ * povezana oni imaju ADJACENCY (sto bi moglo da se prevede kao: blizu ili pored, deliti granicu).
+ * 
+ * Directed graph sadrzi grane koji povezuju jedan cvor sa drugim, ali to su jednosmerne konekcije, ali je moguce
+ * da jedan cvor ima dvosmernu konekciju ka drugim cvorom. Primer directed grapha bi bila mapa nekog grada, 
+ * gde je cvor bilo koja tacka na mapi do koje se moze doci, a grane su ulice koje vode do tih cvorova, 
+ * gde su neki jednosmerni a neki dvosmerni.
+ * 
+ * Dva najrasprostriranija nacina da se predstavi graf su ADJECENCY MATRIX i ADJECENCY LIST. 
+ * Sa ADJECENCY MATRIX pravimo matricu (niz nizova) gde je jedna kolona i jedan red za svaki cvor
+ * 
+ * 		A	B	C	D	E
+ * A 	0	0	1	0	0
+ * B	1	0	0	1	0
+ * C	0	1	0	0	0
+ * D	0	1	1	0	0	
+ * E	0	0	1	0	1
+ * 
+ * Ako zelimo da proverimo da li postoji adjecency izmedju dva cvora prvo potrazimo indeks cvora od koga krecemo
+ * (recimo A) pa onda trazimo indeks cvora do koga idemo (recimo C) - ako nema grane izmedju njih tu ce da stoji 0, 
+ * ako ima veze izmedju njih stajace 1. 
+ * 
+ * Prednosti matrixa su da je runtime kompleksnost pronalazenja grane konstantna O(1), jer moramo da nadjemo samo 
+ * dva indeksa, ali sa druge strane mana matrixa je prostor koji matrix zauzima, tj sto vise podataka skladistimo
+ * to je potrebno vise prostora da se sve pothrani u matrix (primer iznad -> 5 redova * 5 kolona = 25 
+ * polja nam je potrebno)
+ * 
+ * ADJECENCY LIST je niz ili lista nizova gde je svaki element zasebna lista, svaka od tih listi ce imati 
+ * header koji je adresa cvora, ako postoji adjecency izmedju tog cvora i nekog sledeceg, 
+ * to ce biti oznaceno u listi.  
+ * 
+ * A -> B ->
+ * B -> C -> E ->
+ * C -> D -> E ->
+ * D ->
+ * E -> A -> C ->
+ * 
+ * Ako hocemo da vidimo da li cvor B je vezan (adjecent) za E, prvo lociramo indeks od B i pratimo listu koja
+ * pocinje sa B sve dok ne dodjemo do cvora E, sto u slucaju gore znaci da postoji adjecency izmedju cvorova B i E.
+ * Cak i ako postoji cvor koji nije vezan ni za jedan drugi cvor (cvor D u primeru gore), on ce takodje biti dodat 
+ * u listu za slucaj da dodje do update grafa.
+ * 
+ * Prednost adjecency liste: prostor koji zauzima, kompleksnost prostora koji zauzima se oznacava O(V + E) (Vertex + Edge). 
+ * Mana: vremenska kompleksnost za pronalazenja elementa je O(V) (V je broj cvorova), sto znaci da bi locirali granu 
+ * prvo moramo da pristupimo cvoru od koga pocinjemo da ispitujemo adjecency, pa onda nju pratimo cvor po cvor. Sto je veci
+ * prob cvorova to je vise vremena potrebno da se izvrsi pretraga. */
+
+public class Uvod {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package adjecencyMatrix;
+
+/* Adjecency Matrix je matrica u kojoj se cuvaju nule i jedinice koje predstavljaju cvorove u grafu.
+ * Broj redova kao i broj kolona je jednak broju cvorova u grafu. Vremenska kompleksnost pronalazenja cvora je O(1)
+ * sto je veoma brzo, dok je prostor koji je potreban da bi se napravio matriks koji ce da sadrzi podatke o cvorovima
+ * veliki, tj njegova komplaksnost je O(V^2) (V je vertex, node ili cvor) */
+
+public class AdjecencyMatrix {
+
+	char data 
+
+}

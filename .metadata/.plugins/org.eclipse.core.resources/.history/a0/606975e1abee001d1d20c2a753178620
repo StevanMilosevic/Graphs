@@ -1,0 +1,43 @@
+package stevan;
+
+/* Graps su nelinearne agregacija nodova i edges. Node moze da sadrzi neki tip podatka a edge je 
+ * konekcija izmedju dva noda. 
+ * Postoje dve vrsta grafova o kojima cemo ovde da raspravljamo Undirected i Directed.
+ * 
+ * Primer za unidirected graph bi bila socijalna mreza kao Facebook, svaki node predstavlja oosobu
+ * na mrezi, koja moze da ima prijatelje sa kojima je povezan preko edge. Ako su dva node-a 
+ * povezana oni imaju ADJACENCY (sto bi moglo da se prevede kao: blizu ili pored, deliti granicu).
+ * 
+ * Directed graph sadrzi edge-ove koji povezuju jedan node sa drugim, ali to su jednosmerne konekcije, ali je moguce
+ * da jedan node ima dvosmernu konekciju ka drugom node-u. Primer directed grapha bi bila mapa nekog grada, 
+ * gde je node bilo tacka na mapi do koje se moze doci, a edge su ulice koje vode do tih node-ova, 
+ * gde su neke jednosmerne a neke dvosmerne.
+ * 
+ * Dva najrasprostriranija nacina da se predstavi graf su ADJECENCY MATRIX i ADJECENCY LIST. 
+ * Sa ADJECENCY MATRIX pravimo matricu (niz nizova) gde je jedna kolona i jedan red za svaki node
+ * 
+ * 		A	B	C	D	E
+ * A 	0	0	1	0	0
+ * B	1	0	0	1	0
+ * C	0	1	0	0	0
+ * D	0	1	1	0	0	
+ * E	0	0	1	0	1
+ * 
+ * Ako zelimo da proverimo da li postoji adjecency izmedju dva node prvo potrazimo indeks node od koga krecemo
+ * (recimo A) pa onda trazimo indeks node do koga idemo (recimo C) - ako nema edge izmedju njih tu ce da stoji 0, 
+ * ako ima veze izmedju njih stajace 1. 
+ * 
+ * Prednosti matrixa su da je runtime kompleksnost pronalazenja egde konstantna O(1), jer moramo da nadjemo samo 
+ * dva indeksa, ali sa druge strane mana matrixa je prostor koji matrix zauzima, tj sto vise podataka skladistimo
+ * to je potrebno vise prostora da se sve pothrani u matrix (primer iznad -> 5 redova * 5 kolona = 25 polja
+ * 
+ * ADJECENCY LIST 
+ *  */
+public class Main {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

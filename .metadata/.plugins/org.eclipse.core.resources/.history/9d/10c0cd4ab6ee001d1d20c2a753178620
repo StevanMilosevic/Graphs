@@ -1,0 +1,11 @@
+package adjecencyMatrix;
+
+public class Graph {
+	// ovde cemo deklarisati matricu brojeva u kojoj ce da cuvamo 0 i 1 za pozicije gde postoje cvorovi i gde ih nema
+	
+	int[][] matrica;
+	
+	Graph(int velicina){							// velicina je broj cvorova
+		matrica = new int[velicina][velicina];		// kompleksnost 
+	}
+}
